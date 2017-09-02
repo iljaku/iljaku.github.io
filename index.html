@@ -1,0 +1,293 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=ISO-8859-1"
+<meta name="keywords" content="Ilya, Kuzborski, transfer learning,domain adaptation,machine learning,deep learning,learning theory">
+<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+<TITLE>Ilja Kuzborskij</TITLE>
+
+<script language="javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-91666084-1', 'auto');
+  ga('send', 'pageview');
+
+  function toggle(id) {
+  var ele = document.getElementById(id);
+  var text = document.getElementById("displayText");
+  if(ele.style.display == "block") {
+  ele.style.display = "none";
+  }
+  else {
+  ele.style.display = "block";
+  }
+  }
+
+  function SelectText(element) {
+    var doc = document
+	, text = doc.getElementById(element)
+	, range, selection
+    ;
+    if (doc.body.createTextRange) {
+	range = document.body.createTextRange();
+	range.moveToElementText(text);
+	range.select();
+    } else if (window.getSelection) {
+	selection = window.getSelection();
+	range = document.createRange();
+	range.selectNodeContents(text);
+	selection.removeAllRanges();
+	selection.addRange(range);
+    }
+}
+</script>
+
+</HEAD>
+<BODY>
+<!--this is the main div "mainbcontainer" -->
+<div id="maincontainer">
+  <!--this is the begining of the header-->
+  <div id="headercontainer">
+    <div id="logocontainer">
+	</div>
+
+  </div>
+  <!--end header-->
+  <div id="middlecontainer">
+    <div id="leftcont">
+      <img id="photo" title="" src="complete_bw.jpg"  >
+      <div id="addresscontainer">
+	<p>
+	  <img style="width:230px" src="co.png" />
+	</p>
+      </div>
+    </div>
+
+    <div id="contentcontainer">
+		<div id="yourname" title="Ilja Kuzborskij">
+			Ilja Kuzborskij
+		</div>
+
+	<p>
+	<br>
+	I am currently a final year PhD student at <a href="http://www.epfl.ch">École polytechnique fédérale de Lausanne (EPFL)</a>, advised by <a href="https://scholar.google.com/citations?user=mHbdIAwAAAAJ">Prof. Barbara Caputo</a> and <a href="http://francesco.orabona.com/">Prof. Francesco Orabona</a>. My current research interest is in design and analysis of efficient transfer learning algorithms. <br>I am also interested in analysis of non-convex learning problems and nonparametric online learning. See also my <a color="#000000" href="cv-ilja-kuzborskij.pdf">CV</a>.
+	<br><br>
+	</p>
+
+	<!-- <h2>Preprints</h2> -->
+
+	<h2>Publications</h2>
+	<h3>Machine Learning / Visual Learning</h3>
+	<p>
+	  I. Kuzborskij and <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>. <b>Nonparametric Online Regression while Learning the Metric.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; arXiv preprint arXiv:1705.07853, May 2017<br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  [ <a href="https://arxiv.org/pdf/1705.07853"><b>PDF</b></a> ]&ensp;
+	  [ <a href="javascript:toggle('nonpara_online_metric_learning');"><b>BIBTEX</b></a> ]&ensp;
+	  <div id="nonpara_online_metric_learning" class="bibpanel" onclick="SelectText('nonpara_online_metric_learning')" title="Click to select text">
+<PRE>@article{kuzborskij2017nonparametric,
+  title={{N}onparametric {O}nline {R}egression while {L}earning the {M}etric},
+  author={I. Kuzborskij and N. Cesa-Bianchi},
+  journal={arXiv preprint arXiv:1705.07853},
+  year={2017}
+}
+</PRE>
+</div>
+	</p>
+	<p>
+	  I. Kuzborskij and <a href="http://pub.ist.ac.at/~chl/">C. H. Lampert</a>. <b>Data-Dependent Stability of Stochastic Gradient Descent.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; arXiv preprint arXiv:1703.01678, March 2017<br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  [ <a href="https://arxiv.org/pdf/1703.01678"><b>PDF</b></a> ]&ensp;
+	  [ <a href="javascript:toggle('data_dependent_sgd_stability');"><b>BIBTEX</b></a> ]&ensp;
+	  <div id="data_dependent_sgd_stability" class="bibpanel" onclick="SelectText('data_dependent_sgd_stability')" title="Click to select text">
+<PRE>@article{kuzborskij2017data,
+  title={{D}ata-{D}ependent {S}tability of {S}tochastic {G}radient {D}escent},
+  author={I. Kuzborskij and C. H. Lampert},
+  journal={arXiv preprint arXiv:1703.01678},
+  year={2017}
+}
+</PRE>
+	  </div>
+	</p>
+
+	<p>
+	  I. Kuzborskij and <a href="http://francesco.orabona.com/">F. Orabona</a>. <b>Fast Rates by Transferring from Auxiliary Hypotheses.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; Machine Learning, September 2016.<br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  [ <a href="http://arxiv.org/abs/1412.1619" title="arXiv"><b>PDF</b></a> ]&ensp;
+	  [ <a href="https://link.springer.com/article/10.1007%2Fs10994-016-5594-4" title="Link"><b>Link</b></a> ]&ensp;
+	  [ <a href="javascript:toggle('fast_rates');"><b>BIBTEX</b></a> ]&ensp;
+	  <div id="fast_rates" class="bibpanel" onclick="SelectText('fast_rates')" title="Click to select text">
+<PRE>@article{kuzborskij2016fast,
+  author={I. Kuzborskij and F. Orabona},
+  title={Fast {R}ates by {T}ransferring from {A}uxiliary {H}ypotheses},
+  journal="Machine Learning",
+  year=2016,
+  pages="1--25",
+  issn="1573-0565",
+  doi="10.1007/s10994-016-5594-4",
+  url="http://dx.doi.org/10.1007/s10994-016-5594-4"
+}</PRE>
+	  </div>
+	</p>
+	<p>
+	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b> Scalable Greedy Algorithms for Transfer Learning. </b> <br>&nbsp;&nbsp;&nbsp;&nbsp; Computer Vision and Image Understanding, 2016.<br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  [ <a href="http://arxiv.org/abs/1408.1292" title="arXiv"><b>PDF</b></a> ]&ensp;
+	  [ <a href="http://www.sciencedirect.com/science/article/pii/S1077314216301370" title="Link"><b>Link</b></a> ]&ensp;
+	  [ <a href="javascript:toggle('greedy_tl');"><b>BIBTEX</b></a> ]&ensp;
+	  <div id="greedy_tl" class="bibpanel" onclick="SelectText('greedy_tl')" title="Click to select text">
+<PRE>@article{kuzborskij2016scalable,
+  author    = {I. Kuzborskij and
+	       F. Orabona and
+	       B. Caputo},
+  title     = {Transfer {L}earning through {G}reedy {S}ubset {S}election},
+  journal = "Computer Vision and Image Understanding ",
+  volume = "",
+  number = "",
+  pages = " - ",
+  year = "2016",
+  issn = "1077-3142",
+  doi = "http://dx.doi.org/10.1016/j.cviu.2016.09.003",
+  url = "http://www.sciencedirect.com/science/article/pii/S1077314216301370",
+}</PRE>
+	  </div>
+	</p>
+	<p>
+	  I. Kuzborskij, <a href="https://fmcarlucci.github.io/">F.M. Carlucci</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b>When Na&iuml;ve Bayes Nearest Neighbors Meet Convolutional Neural Networks.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, USA. June 2016.
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  [ <a href="pub/cvpr16.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
+	  [ <a href="javascript:toggle('cvpr16');"><b>BIBTEX</b></a> ]&ensp;
+	  [ <a href="pub/cvpr16_supplement.pdf" title="pdf">Supplement</a> ]&ensp;
+	  [ <a href="code/stoml3.tgz" title="code">Code</a> ]
+	  <div id="cvpr16" class="bibpanel" onclick="SelectText('cvpr16')" title="Click to select text">
+<PRE>@inproceedings{kuzborskij2016when,
+    title={{W}hen {N}aive {B}ayes {N}earest {N}eighbours
+	   {M}eet {C}onvolutional {N}eural {N}etworks},
+    author={Kuzborskij, I. and Carlucci, F. M. and Caputo, B.},
+    booktitle={Computer Vision and Pattern Recognition (CVPR), 2016 IEEE Conference on},
+    year={2016}
+}</PRE>
+	  </div>
+	</p>
+	<p>
+	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b>Transfer Learning through Greedy Subset Selection. </b> &nbsp; <b><span style="color:black"><a href="http://www.iciap2015.eu/program/awards.html">Best Paper Award</a></span></b>
+<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+	    International Conference on Image Analysis and Processing (ICIAP), Genova, Italy. September 2015.
+	    <br/>
+	    &ensp;&ensp;&ensp;[ <a href="pub/iciap15.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
+	    [ <a id="displayText" href="javascript:toggle('iciap15');"><b>BIBTEX</b></a> ]&ensp;
+	    [ <a href="code/greedytl.tgz" title="code">Code</a> ]
+
+	  <div id="iciap15" class="bibpanel" onclick="SelectText('iciap15')" title="Click to select text">
+<PRE>@inproceedings{kuzborskij2015transfer,
+  author    = {I. Kuzborskij and
+	       F. Orabona and
+	       B. Caputo},
+  title     = {Transfer Learning Through Greedy Subset Selection},
+  booktitle = {Image Analysis and Processing - {ICIAP} 2015 - 18th International
+	       Conference, Proceedings, Part
+	       {I}},
+  pages     = {3--14},
+  year      = {2015},
+}</PRE>
+	  </div>
+	</p>
+	<p>
+	  I. Kuzborskij and <a href="http://francesco.orabona.com/">F. Orabona</a>. <b>Stability and Hypothesis Transfer Learning.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; International Conference on Machine Learning (ICML), Atlanta, GA, USA. June 2013.
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	  [ <a href="pub/icml13.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
+	  [ <a id="displayText" href="javascript:toggle('icml13');"><b>BIBTEX</b></a> ]&ensp;
+	  [ <a href="pub/icml13_errata.pdf" title="errata"> Errata </a> ]
+<div id="icml13" class="bibpanel" onclick="SelectText('icml13')" title="Click to select text">
+<PRE>@inproceedings{kuzborskij2013stability,
+  author    = {I. Kuzborskij and
+	       F. Orabona},
+  title     = {Stability and {H}ypothesis {T}ransfer {L}earning},
+  booktitle = {International Conference on Machine Learning},
+  pages     = {942--950},
+  year      = {2013}
+}</PRE>
+</div>
+	</p>
+	<p>
+	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b>From N to N+1: Multiclass Transfer Incremental Learning.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Portland, OR, USA. June 2013.
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	[ <a href="pub/cvpr13.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
+	[ <a id="displayText" href="javascript:toggle('cvpr13');"><b>BIBTEX</b></a> ]&ensp;
+	[ <a title="C++/mex implementation, standalone" href="code/multiple.tgz" title="code">Code</a> ]&ensp;
+	<!-- <a href="code/cvpr13_code.zip" title="code">[Code (old version)]</a>&ensp; -->
+	[ <a href="pub/cvpr13_supplement.pdf" title="pdf">Supplement</a> ]
+<div id="cvpr13" class="bibpanel" onclick="SelectText('cvpr13')" title="Click to select text">
+<PRE>@inproceedings{kuzborskij2013from,
+  title =        {From {N} to {N}+1: {M}ulticlass {T}ransfer {I}ncremental {L}earning},
+  author =       {Kuzborskij, I. and Orabona, F. and Caputo, B.},
+  booktitle={Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference on},
+  pages={3358--3365},
+  year={2013},
+  organization={IEEE}
+}</PRE>
+</div>
+	</p>
+
+	<h3>Bio-robotics</h3>
+	<p>
+	  M. Atzori, A. Gijsberts, I. Kuzborskij, S. Elsig, A.-G. Mittaz Hager, O. Deriaz,
+	  <a href="http://rmc.dlr.de/rm/en/staff/claudio.castellini/">C. Castellini</a>,
+	  <a href="http://medgift.hevs.ch/silverstripe/index.php/team/henning-mueller/">H. Muller</a>,
+	  <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>.
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Characterization of a Benchmark Database for Myoelectric Movement Classification.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2015/1, Vol. 23.
+	  <br/>
+
+	  &nbsp;&nbsp;&nbsp;&nbsp;
+	  [ <a href="pub/tnsre15.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
+	  [ <a id="displayText" href="javascript:toggle('tnsre14');"><b>BIBTEX</b></a> ]&ensp;
+	  <div id="tnsre14" class="bibpanel" onclick="SelectText('tnsre14')" title="Click to select text">
+<PRE>@article{atzori2015characterization,
+  title={Characterization of a {B}enchmark {D}atabase for
+	 {M}yoelectric {M}ovement {C}lassification},
+  author={Atzori, M. and Gijsberts, A. and Kuzborskij, I. and
+	  Elsig, S. and Mittaz Hager, A.-G. and Deriaz, O. and
+	  Castellini, C. and Muller, H. and Caputo, B.},
+  journal={Neural Systems and Rehabilitation Engineering, IEEE Transactions on},
+  volume={23},
+  number={1},
+  pages={73--83},
+  year={2015},
+  publisher={IEEE}
+}</PRE>
+	  </div>
+	</p>
+	<p>
+	  I. Kuzborskij, A. Gijsberts, <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>.
+	  <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>On the Challenge of Classifying 52 Hand Movements from Surface Electromyography.</b>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;International Conference of the IEEE Engineering in Medicine and Biology Society, San Diego, CA, USA. August 2012.
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <a href="pub/embc12.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
+	  [ <a id="displayText" href="javascript:toggle('embc12');"><b>BIBTEX</b></a> ]&ensp;
+	  <div id="embc12" class="bibpanel" onclick="SelectText('embc12')" title="Click to select text">
+<PRE>@inproceedings{kuzborskij2012challenge,
+  title={On the {C}hallenge of {C}lassifying 52 {H}and {M}ovements from
+	 {S}urface {E}lectromyography},
+  author={Kuzborskij, I. and Gijsberts, A. and Caputo, B.},
+  booktitle={Engineering in Medicine and Biology Society (EMBC),
+	     2012 Annual International Conference of the IEEE},
+  pages={4931--4937},
+  year={2012},
+  organization={IEEE}
+}
+</PRE>
+	  </div>
+	</p>
+    </div>
+	<!--end contentbox-->
+  </div>
+</div>
+<!--end mainbox-->
+</BODY>
+</HTML>
