@@ -1,0 +1,175 @@
+/* find below the "div" structure
+mainbcontainer
+	headercontainer
+		logocontainer
+		bannercontainer
+	headercontainer
+	
+	middlecontainer
+		addresscontainer
+		contentcontainer
+			roundbox
+	middlecontainer
+	
+	footercontainer
+mainbcontainer
+*/
+
+a:link {color:#636363;}      /* unvisited link */
+a:visited {color:#636363;}  /* visited link */
+a:hover {color:#636363;}  /* mouse over link */
+a:active {color:#636363;}  /* selected link */ 
+
+body{
+background-color:#ffffff;
+margin:0em 0em 0em 0em;
+color: #636363;
+font-family: Arial,Helvetica,Verdana,"Lucida Grande",Lucida sans-serif;
+font-size:0.8em;
+text-align: justify;
+line-height: 1.5;
+}
+img{
+border:0;
+}
+/*this is the style for the main container with a fixed size*/
+#maincontainer{
+width:1280;
+margin:0em auto;
+/* float:left; */
+background-color:#ffffff;
+}
+/*this is the style for the container header*/
+#headercontainer{
+width:1280;
+background-color:#ffffff;
+margin:0em;
+padding:0em 0em 0em 0em;
+clear:both;
+}
+/*this is the style for the container logo*/
+#logocontainer{
+width:200 !important;
+width:265;
+padding:0.8em 0em 0em 5em;
+float:left;
+background-color: #ffffff;
+}
+/*this is the style for the container banner*/
+#bannercontainer{
+/* background-image:url(banner.png); */
+background-repeat:no-repeat;
+width:940px;
+height:108px;
+padding:0em 0em 0em 0em;
+float:left;
+background-color:#ffffff;
+}
+/*this is the style for the text 'user name' located in the banner*/
+#yourname{
+color:#000000;
+font-size:20px;
+padding:1em 0em 1em 0.9em;
+font-family: Geneva,Verdana,Helvetica,"Lucida Grande",Lucida sans-serif;
+font-style:normal;
+font-weight:bold;
+
+
+background: none repeat scroll 0% 0% rgb(234, 236, 234);
+border-radius: 5px 5px 5px 5px;
+
+/* text-shadow: #000000 1px 1px 0.5px; */
+}
+/*this is the style for the midlle container*/
+#middlecontainer{
+width:1280;
+clear:both;
+background-color:#ffffff;
+margin:0em;
+padding:0em;
+}
+/*this is the style for the container address*/
+#addresscontainer{
+width:auto!important;
+padding:0.5em 2em 0.5em 2em;
+margin:2em 0em 0em 0em;
+background-color:#ffffff;
+float:left;
+margin-left: 2em;
+
+background: none repeat scroll 0% 0% rgb(234, 236, 234);
+border-radius: 5px 5px 5px 5px;
+}
+
+.bibpanel{
+    display: none;
+    padding:1em 0em 1em 2em;
+    background-color: rgb(234, 236, 234);
+    border-radius: 5px 5px 5px 5px;    
+}
+
+#leftcont{
+width:300;
+margin:2em 0em 0em 0em;
+background-color:#ffffff;
+float:left;
+margin-left: 2em;
+
+background: none repeat scroll 0% 0%;
+border-radius: 5px 5px 5px 5px;
+}
+
+#photo{
+width:160;
+display: block;
+margin:3em 0em 0em 0em;
+background-color:#ffffff;
+margin-left: auto;
+margin-right: auto;
+
+/* background: none repeat scroll 0% 0% #00000000; */
+border-radius: 5px 5px 5px 5px;
+}
+
+/*this is the style for the container content*/
+#contentcontainer{
+width:830;
+padding:0em 0em 0em 0em;
+margin:2em 2em 2em 6em;
+float:left;
+background-color:#ffffff;
+font-size:15;
+}
+/*this is the style for the container footer*/
+#footercontainer{
+clear:both;
+width:1100;
+height:2em;
+margin:9em 0em 0em 2em !important;
+margin:2em 0em 0em 2em;
+padding:0.5em 0em 0.8em 0em;
+background-color: #cccccc;
+}
+#footertxt
+{
+width:500;
+text-align:left;
+margin:0em 0em 0em 3em;
+}
+
+#blacklink
+{
+    color:#000000;
+}
+
+#pane{
+    display: block;
+    padding: 7px 15px 0px;
+    height: 28px;
+    font-size: 16px;
+    background: none repeat scroll 0% 0% rgb(234, 236, 234);
+    color: rgb(102, 102, 102);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-decoration: none;
+}
