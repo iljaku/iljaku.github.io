@@ -1,19 +1,24 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<HTML>
+<!DOCTYPE html>
+<html lang="en">
 <HEAD>
-<META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8"
-<meta name="keywords" content="machine learning,learning theory">
-<LINK REL=StyleSheet HREF="style.css" TYPE="text/css" MEDIA=screen>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="classical">
+<link rel="stylesheet" href="style2.css" type="text/css" media="screen">
 <TITLE>Ilja Kuzborskij</TITLE>
 
-<script language="javascript">
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WRP0YZ98JR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  ga('create', 'UA-91666084-1', 'auto');
-  ga('send', 'pageview');
+  gtag('config', 'G-WRP0YZ98JR');
+</script>
+
+<script language="javascript">
+
 
   function toggle(id) {
   var ele = document.getElementById(id);
@@ -42,24 +47,21 @@
 	selection.removeAllRanges();
 	selection.addRange(range);
     }
+  }
+
+  function copyBibliography(id) {
+    var content = document.getElementById(id);
+    navigator.clipboard.writeText(content.innerText).then(function() {
+
+    }).catch(function(error) {
+        alert('Error copying text: ' + error);
+    });
 }
 </script>
 
 </HEAD>
 <BODY>
-<!--this is the main div "mainbcontainer" -->
 <div id="maincontainer" class="center-screen">
-  <!--this is the begining of the header-->
-  <!--end header-->
-  <!-- <div id="middlecontainer"> -->
-  <!--   <div id="leftcont"> -->
-  <!--     <\!-- <img id="photo" title="" src="complete_bw.jpg"  > -\-> -->
-  <!--     <div id="addresscontainer"> -->
-  <!--	<p> -->
-  <!--	  firsname.lastname@gmail.com -->
-  <!--	</p> -->
-  <!--     </div> -->
-  <!--   </div> -->
 
   <div id="contentcontainer">
     <div id="yourname" title="Ilja Kuzborskij">
@@ -68,28 +70,27 @@
 
     <p>
       <br>
-      I am a research scientist at DeepMind, London.
+      I am a research scientist at Google DeepMind, London.
       <br/>
       <br/>
-      I am interested in problem-dependent (distribution/sample/instance-dependent) analysis and design of learning algorithms in
-      statistical, non-stochastic online, partial feedback, and nonparametric prediction models.
-      <br><br>
-      Previously, I spent one great year as a postdoc with <a href="http://cesa-bianchi.di.unimi.it/">Nicolò Cesa-Bianchi</a>.
-      Before that I finished PhD at <a href="http://www.epfl.ch">EPFL</a> and <a href="http://www.idiap.ch">Idiap Research Institute</a>, advised by <a href="https://scholar.google.com/citations?user=mHbdIAwAAAAJ">Barbara Caputo</a> and <a href="http://francesco.orabona.com/">Francesco Orabona</a>.
-      <br><br>
+      I am interested in design and analysis of learning algorithms, with emphasis on theories of generalization, uncertainty estimation, and concentration inequalities.
+      <br/>
+      <br/>
       You can contact me at firstname.lastname@gmail.com
     </p>
 
     <h2>Tech reports</h2>
 
     <p>
-      I. Kuzborskij and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>. <b>Efron-Stein PAC-Bayesian Inequalities</b>
+      I. Kuzborskij and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>
+      <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Efron-Stein PAC-Bayesian Inequalities</b>
       <br>&nbsp;&nbsp;&nbsp;&nbsp;arXiv. September 2019.</br>
       &nbsp;&nbsp;&nbsp;
-      [ <a href="https://arxiv.org/abs/1909.01931"><b>PDF</b></a> ]&ensp;
-      [ <a href="javascript:toggle('efron_stein_pac_bayesian');"><b>BibTex</b></a> ]&ensp;
-      <div id="efron_stein_pac_bayesian" class="bibpanel" onclick="SelectText('efron_stein_pac_bayesian')" title="Click to select text">
-	<PRE>
+      <a href="https://arxiv.org/abs/1909.01931">PDF</a>&ensp;
+      <a href="javascript:toggle('efron_stein_pac_bayesian_wrap');">Bibtex</a>&ensp;
+      <div id="efron_stein_pac_bayesian_wrap" class="bibpanel">
+	  <PRE id="efron_stein_pac_bayesian">
 @misc{kuzborskij2019efron,
 title =		 {Efron-{S}tein {PAC}-{B}ayesian {I}nequalities},
 author =	 {Kuzborskij, Ilja and Szepesvári, Csaba},
@@ -97,19 +98,21 @@ howpublished = {arXiv:1909.01931},
 year = {2019},
 pdf =	 {https://arxiv.org/pdf/1909.01931},
 url =	 {https://arxiv.org/abs/1909.01931}
-}</PRE>
+}
+	  </PRE>
+	  <button onclick="copyBibliography('efron_stein_pac_bayesian')">Copy</button>
       </div>
     </p>
 
     <p>
-      I. Kuzborskij and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>.<br/>
+      I. Kuzborskij and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a><br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<b>Learning Lipschitz Functions by GD-trained Shallow Overparameterized ReLU Neural Networks</b>
       <br>&nbsp;&nbsp;&nbsp;&nbsp;arXiv. December 2022.</br>
       &nbsp;&nbsp;&nbsp;
-      [ <a href="http://arxiv.org/abs/2212.13848"><b>PDF</b></a> ]&ensp;
-      [ <a href="javascript:toggle('lipschitz_gd_nn');"><b>BibTex</b></a> ]&ensp;
-      <div id="lipschitz_gd_nn" class="bibpanel" onclick="SelectText('lipschitz_gd_nn')" title="Click to select text">
-	<PRE>
+      <a href="http://arxiv.org/abs/2212.13848">PDF</a>&ensp;
+      <a href="javascript:toggle('lipschitz_gd_nn_wrap');">Bibtex</a>&ensp;
+      <div id="lipschitz_gd_nn_wrap" class="bibpanel">
+	<PRE id="lipschitz_gd_nn">
 @misc{kuzborskij2022learning,
 title = {Learning Lipschitz Functions by GD-trained Shallow Overparameterized ReLU Neural Networks},
 author = {Kuzborskij, Ilja and Szepesvári, Csaba},
@@ -118,45 +121,121 @@ year = {2022},
 pdf = {https://arxiv.org/pdf/2212.13848},
 url = {https://arxiv.org/abs/2212.13848}
 }</PRE>
+	<button onclick="copyBibliography('lipschitz_gd_nn')">Copy</button>
       </div>
-    
 
-
-	<h2>Publications</h2>
-	<h3>Machine Learning</h3>
-
-	<p>
-      <b style="font-size:105%;margin-left:-60px;">[New]</b>&nbsp;&nbsp;&nbsp K. Jang,
-      <a href="https://kwangsungjun.github.io/">K.-S. Jun</a>,
-      I. Kuzborskij,
-      and <a href="http://francesco.orabona.com/">F. Orabona</a>.
-      <b>Tighter PAC-Bayes Bounds Through Coin-Betting</b>
-      <br>&nbsp;&nbsp;&nbsp;&nbsp;Conference on Learning Theory (<a href="http://learningtheory.org/colt2023">COLT</a>) 2023 (to appear).</br>
+    <p>
+      Y. Abbasi-Yadkori, I. Kuzborskij, D. Stutz, A. György, A. Fisch, A. Doucet,
+      <br/>
+      I. Beloshapka, W.-H. Weng, Y.-Y. Yang, Cs. Szepesvári, A. T. Cemgil, N. Tomasev
+      <br/>
+      &nbsp;&nbsp;&nbsp;      
+      <b>Mitigating LLM Hallucinations via Conformal Abstention</b>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;arXiv. April 2024.</br>
       &nbsp;&nbsp;&nbsp;
-      [ <a href="https://arxiv.org/abs/2302.05829"><b>PDF</b></a> ]&ensp;
-      [ <a href="javascript:toggle('pac_bayes_coin_betting');"><b>BibTex</b></a> ]&ensp;
-      <div id="pac_bayes_coin_betting" class="bibpanel" onclick="SelectText('pac_bayes_coin_betting')" title="Click to select text">
-	<PRE>
-@misc{jang2023tighter,
-title={Tighter PAC-Bayes Bounds Through Coin-Betting},
-author={Jang, Kyoungseok and Jun, Kwang-Sung and Kuzborskij, Ilja and Orabona, Francesco},
-howpublished={arXiv:2302.05829},
-year={2023},
-pdf = {https://arxiv.org/pdf/2302.05829},
-url = {https://arxiv.org/abs/2302.05829}
+      <a href="https://arxiv.org/abs/2405.01563">PDF</a>&ensp;
+      <a href="javascript:toggle('yadkori2024mitigating_wrap');">Bibtex</a>&ensp;
+      <div id="yadkori2024mitigating_wrap" class="bibpanel">
+	<PRE id="yadkori2024mitigating">
+@article{yadkori2024mitigating,
+  title={Mitigating LLM Hallucinations via Conformal Abstention},
+  author={Yadkori, Yasin Abbasi and Kuzborskij, Ilja and Stutz, David and Gy{\"o}rgy, Andr{\'a}s and Fisch, Adam and Doucet,
+Arnaud and Beloshapka, Iuliya and Weng, Wei-Hung and Yang, Yao-Yuan and Szepesv{\'a}ri, Csaba and others},
+  journal={arXiv preprint arXiv:2405.01563},
+  year={2024}
+}
+</PRE>
+	<button onclick="copyBibliography('yadkori2024mitigating')">Copy</button>
+      </div>
+
+      
+
+
+      <h2>Publications</h2>
+      <h3>Machine Learning</h3>
+
+          <p>
+	    <b style="font-size:105%;margin-left:-60px;">New</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+	    I. Kuzborskij,
+	    <a href="https://kwangsungjun.github.io/">K.-S. Jun</a>,
+	    <a href="https://yulianwu.github.io/">Y. Wu</a>,
+      <a href="https://jajajang.github.io/">K. Jang</a>,     
+      and <a href="http://francesco.orabona.com/">F. Orabona</a>
+      <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Better-than-KL PAC-Bayes Bounds</b>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Conference on Learning Theory (<a href="http://learningtheory.org/colt2024">COLT</a>) 2024 (to appear).</br>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://arxiv.org/abs/2402.09201">PDF</a>&ensp;
+      <a href="javascript:toggle('kuzborskij2024better_wrap');">Bibtex</a>&ensp;
+      <div id="kuzborskij2024better_wrap" class="bibpanel">
+	<PRE id="kuzborskij2024better">
+@inproceedings{kuzborskij2024better,
+title={Better-than-KL {PAC-Bayes} Bounds},
+author={Kuzborskij, Ilja and Jun, Kwang-Sung and Wu, Yulian and Jang, Kyoungseok and Orabona, Francesco},
+booktitle={Conference on Learning Theory (COLT)},
+year={2024},
 }</PRE>
+	<button onclick="copyBibliography('kuzborskij2024better')">Copy</button>
+      </div>
+    </p>   
+
+    <p>
+      <a href="https://sites.psu.edu/yuyangdeng/">Y. Deng</a>,
+      I. Kuzborskij,
+      and <a href="https://www.cse.psu.edu/~mzm616/">M. Mahdavi</a>
+      <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Mixture Weight Estimation and Model Prediction in Multi-source Multi-target Domain Adaptation</b>
+      </br>
+      &nbsp;&nbsp;&nbsp;&nbsp;Conference on Neural Information Processing Systems (<a href="https://neurips.cc/Conferences/2023">NeurIPS</a>) 2023.
+      <br/>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/0fa81c3f0d57f95b8776de3a248ef0ed-Paper-Conference.pdf">PDF</a>&ensp;
+      <a href="javascript:toggle('deng2023mixture_wrap');">Bibtex</a>&ensp;
+      <div id="deng2023mixture_wrap" class="bibpanel">
+      <PRE id="deng2023mixture">
+@inproceedings{deng2023mixture,
+  title={Mixture Weight Estimation and Model Prediction in Multi-source Multi-target Domain Adaptation},
+  author={Deng, Yuyang and Kuzborskij, Ilja and Mahdavi, Mehrdad},
+  booktitle={Neural Information Processing Systems (NeurIPS)},
+  year={2023}
+}	
+      </PRE>
+      <button onclick="copyBibliography('deng2023mixture')">Copy</button>
       </div>
     </p>
-
+    
+    <p>
+      <!-- <b style="font-size:105%;margin-left:-60px;">[New]</b>&nbsp;&nbsp;&nbsp -->
+      <a href="https://jajajang.github.io/">K. Jang</a>,
+      <a href="https://kwangsungjun.github.io/">K.-S. Jun</a>,
+      I. Kuzborskij,
+      and <a href="http://francesco.orabona.com/">F. Orabona</a>
+      <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>Tighter PAC-Bayes Bounds Through Coin-Betting</b>
+      <br>&nbsp;&nbsp;&nbsp;&nbsp;Conference on Learning Theory (<a href="http://learningtheory.org/colt2023">COLT</a>) 2023.</br>
+      &nbsp;&nbsp;&nbsp;
+      <a href="https://arxiv.org/abs/2302.05829">PDF</a>&ensp;
+      <a href="javascript:toggle('pac_bayes_coin_betting_wrap');">Bibtex</a>&ensp;
+      <div id="pac_bayes_coin_betting_wrap" class="bibpanel">
+	<PRE id="pac_bayes_coin_betting">
+@inproceedings{jang2023tighter,
+title={Tighter {PAC-Bayes} Bounds Through Coin-Betting},
+author={Jang, Kyoungseok and Jun, Kwang-Sung and Kuzborskij, Ilja and Orabona, Francesco},
+booktitle={Conference on Learning Theory (COLT)},
+year={2023},
+}</PRE>
+	<button onclick="copyBibliography('pac_bayes_coin_betting')">Copy</button>
+      </div>
+    </p>   
 	    <p>
-      <a href="https://dominicrichards.github.io/">D. Richards</a> and I. Kuzborskij.<br/>
+      <a href="https://dominicrichards.github.io/">D. Richards</a> and I. Kuzborskij<br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<b>Stability &amp; Generalisation of Gradient Descent for Shallow Neural Networks without the Neural Tangent Kernel</b>
       <br>&nbsp;&nbsp;&nbsp;&nbsp;Conference on Neural Information Processing Systems (<a href="https://neurips.cc/Conferences/2021">NeurIPS</a>) 2021.</br>
 		  &nbsp;&nbsp;&nbsp;
-		  [ <a href="https://proceedings.neurips.cc/paper/2021/hash/483101a6bc4e6c46a86222eb65fbcb6a-Abstract.html"><b>PDF</b></a> ]&ensp;
-		  [ <a href="javascript:toggle('shallow_nets_GD_stability');"><b>BibTex</b></a> ]&ensp;
-		  <div id="shallow_nets_GD_stability" class="bibpanel" onclick="SelectText('shallow_nets_GD_stability')" title="Click to select text">
-		    <PRE>
+		  <a href="https://proceedings.neurips.cc/paper/2021/hash/483101a6bc4e6c46a86222eb65fbcb6a-Abstract.html">PDF</a>&ensp;
+		  <a href="javascript:toggle('shallow_nets_GD_stability_wrap');">Bibtex</a>&ensp;
+		  <div id="shallow_nets_GD_stability_wrap" class="bibpanel">
+		    <PRE id="shallow_nets_GD_stability">
 @inproceedings{richards2021stability,
   title={Stability \& Generalisation of Gradient Descent for Shallow Neural Networks without the Neural Tangent Kernel},
   author={Richards, D. and Kuzborskij, I.},
@@ -164,6 +243,7 @@ url = {https://arxiv.org/abs/2302.05829}
   year={2021}
 }
 		    </PRE>
+		    <button onclick="copyBibliography('shallow_nets_GD_stability')">Copy</button>
 		  </div>
     </p>
 
@@ -173,14 +253,14 @@ url = {https://arxiv.org/abs/2302.05829}
       <a href="https://sites.ualberta.ca/~omarr/">O. Rivasplata</a>,
       <a href="http://amal.rannen.triki.me/">A. Rannen Triki</a>,
       and
-      <a href="https://sites.google.com/view/razp">R. Pascanu</a>.<br/>
+      <a href="https://sites.google.com/view/razp">R. Pascanu</a><br/>
       &nbsp;&nbsp;&nbsp;&nbsp;<b>On the Role of Optimization in Double Descent: A Least Squares Study</b>
       <br>&nbsp;&nbsp;&nbsp;&nbsp;Conference on Neural Information Processing Systems (<a href="https://neurips.cc/Conferences/2021">NeurIPS</a>) 2021.</br>
       &nbsp;&nbsp;&nbsp;
-      [ <a href="https://proceedings.neurips.cc/paper/2021/hash/f754186469a933256d7d64095e963594-Abstract.html"><b>PDF</b></a> ]&ensp;
-      [ <a href="javascript:toggle('dd_opt_ls');"><b>BibTex</b></a> ]&ensp;
-      <div id="dd_opt_ls" class="bibpanel" onclick="SelectText('dd_opt_ls')" title="Click to select text">
-	<PRE>
+      <a href="https://proceedings.neurips.cc/paper/2021/hash/f754186469a933256d7d64095e963594-Abstract.html">PDF</a>&ensp;
+      <a href="javascript:toggle('dd_opt_ls_wrap');">Bibtex</a>&ensp;
+      <div id="dd_opt_ls_wrap" class="bibpanel">
+	<PRE id="dd_opt_ls">
 @inproceedings{kuzborskij2021role,
       title={On the Role of Optimization in Double Descent: A Least Squares Study},
       author={Ilja Kuzborskij and Csaba Szepesvári and Omar Rivasplata and Amal Rannen-Triki and Razvan Pascanu},
@@ -188,25 +268,28 @@ url = {https://arxiv.org/abs/2302.05829}
       year={2021}
 }
 	</PRE>
+	<button onclick="copyBibliography('dd_opt_ls')">Copy</button>
       </div>
     </p>
 
     <p>
-      <a href="https://ca.linkedin.com/in/mkonobeev">M. Konobeev</a>, I. Kuzborskij, and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>.
-      <b>A Distribution-dependent Analysis of Meta Learning</b><br/>
+      <a href="https://ca.linkedin.com/in/mkonobeev">M. Konobeev</a>, I. Kuzborskij, and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>
+      <br/>
+      &nbsp;&nbsp;&nbsp;&nbsp;<b>A Distribution-dependent Analysis of Meta Learning</b><br/>
       &nbsp;&nbsp;&nbsp;&nbsp;International Conference on Machine Learning (<a href="https://icml.cc">ICML</a>) 2021. </br>
       &nbsp;&nbsp;&nbsp;
-      [ <a href="http://proceedings.mlr.press/v139/konobeev21a/konobeev21a.pdf"><b>PDF</b></a> ]&ensp;
-      [ <a href="http://proceedings.mlr.press/v139/konobeev21a/konobeev21a-supp.zip" title="code"><b>Supplementary / Code</b></a> ]&ensp;
-      [ <a href="javascript:toggle('meta_biased');"><b>BibTex</b></a> ]&ensp;
-      <div id="meta_biased" class="bibpanel" onclick="SelectText('meta_biased')" title="Click to select text">
-	<PRE>
+      <a href="http://proceedings.mlr.press/v139/konobeev21a/konobeev21a.pdf">PDF</a>&ensp;      
+      <a href="javascript:toggle('meta_biased_wrap');">Bibtex</a>&ensp;
+      <a href="http://proceedings.mlr.press/v139/konobeev21a/konobeev21a-supp.zip" title="code">Code</a>&ensp;
+      <div id="meta_biased_wrap" class="bibpanel">
+	<PRE id="meta_biased">
 @inproceedings{konobeev2020statistical,
 title = "{A Distribution-dependent Analysis of Meta Learning}",
 author = {Konobeev, Mikhail and Kuzborskij, Ilja and Szepesvári, Csaba},
 booktitle =	 {International Conference on Machine Learning},
 year = {2021}
 }</PRE>
+	<button onclick="copyBibliography('meta_biased')">Copy</button>
       </div>
     </p>
 
@@ -214,15 +297,15 @@ year = {2021}
 	  I. Kuzborskij,
 		  <a href="https://www.cvernade.com/">C. Vernade</a>,
 		  <a href="https://www.imperial.ac.uk/people/a.gyorgy">A. György</a>, and
-		  <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>.<br/>
+		  <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a><br/>
 		  &nbsp;&nbsp;&nbsp;&nbsp;<b>Confident Off-Policy Evaluation and Selection through Self-Normalized Importance Weighting</b><br/>
 		  &nbsp;&nbsp;&nbsp;&nbsp; International Conference on Artificial Intelligence and Statistics (<a href="https://aistats.org/aistats2021/">AISTATS</a>) 2021.  <br/>
 		  &nbsp;&nbsp;&nbsp;
-		  [ <a href="https://arxiv.org/pdf/2006.10460.pdf"><b>PDF</b> (revised version)</a> ]&ensp;
-		  [ <a href="https://github.com/deepmind/offpolicy_selection_eslb" title="code"><b>Code</b></a> ]&ensp;
-		  [ <a href="javascript:toggle('confident_off_policy_eval');"><b>BibTex</b></a> ]&ensp;
-		  <div id="confident_off_policy_eval" class="bibpanel" onclick="SelectText('confident_off_policy_eval')" title="Click to select text">
-		    <PRE>
+		  <a href="https://arxiv.org/pdf/2006.10460.pdf">PDF</a>&ensp;		  
+		  <a href="javascript:toggle('confident_off_policy_eval_wrap');">Bibtex</a>&ensp;
+		  <a href="https://github.com/deepmind/offpolicy_selection_eslb" title="code">Code</a>&ensp;
+		  <div id="confident_off_policy_eval_wrap" class="bibpanel">
+		    <PRE id="confident_off_policy_eval">
 @InProceedings{pmlr-v130-kuzborskij21a,
   title =	 { Confident Off-Policy Evaluation and Selection through Self-Normalized Importance Weighting },
   author =       {Kuzborskij, Ilja and Vernade, Claire and Gyorgy, Andras and Szepesvari, Csaba},
@@ -230,17 +313,20 @@ year = {2021}
   year =	 {2021}
 }
 		    </PRE>
+		    <button onclick="copyBibliography('confident_off_policy_eval')">Copy</button>
 		  </div>
 		</p>
 
 		<p>
-		  I. Kuzborskij and <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>. <b>Locally-Adaptive Nonparametric Online Learning</b>
+		  I. Kuzborskij and <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>
+		  <br/>
+		  &nbsp;&nbsp;&nbsp;&nbsp;<b>Locally-Adaptive Nonparametric Online Learning</b>
 		  <br>&nbsp;&nbsp;&nbsp;&nbsp;Conference on Neural Information Processing Systems (<a href="https://neurips.cc/Conferences/2020">NeurIPS</a>) 2020.</br>
 		  &nbsp;&nbsp;&nbsp;
-		  [ <a href="https://proceedings.neurips.cc/paper/2020/hash/12780ea688a71dabc284b064add459a4-Abstract.html"><b>PDF</b></a> ]&ensp;
-		  [ <a href="javascript:toggle('locally_adaptive_nonparametric_online');"><b>BibTex</b></a> ]&ensp;
-		  <div id="locally_adaptive_nonparametric_online" class="bibpanel" onclick="SelectText('locally_adaptive_nonparametric_online')" title="Click to select text">
-		    <PRE>
+		  <a href="https://proceedings.neurips.cc/paper/2020/hash/12780ea688a71dabc284b064add459a4-Abstract.html">PDF</a>&ensp;
+		  <a href="javascript:toggle('locally_adaptive_nonparametric_online_wrap');">Bibtex</a>&ensp;
+		  <div id="locally_adaptive_nonparametric_online_wrap" class="bibpanel">
+		    <PRE id="locally_adaptive_nonparametric_online">
 @inproceedings{kuzborskij2020locally,
 title =		 {Locally-{A}daptive {N}onparametric {O}nline {L}earning},
 author =	 {Kuzborskij, Ilja and Cesa-Bianchi, Nicol\`{o}},
@@ -248,20 +334,22 @@ booktitle= {Neural Information Processing Systems (NeurIPS)},
 year = {2020}
 }
 		    </PRE>
+		    <button onclick="copyBibliography('locally_adaptive_nonparametric_online')">Copy</button>
 		  </div>
 		</p>
 		<p>
 		  <a href="https://sites.ualberta.ca/~omarr/">O. Rivasplata</a>
 		  I. Kuzborskij,
 		  <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>, and
-		  <a href="http://www0.cs.ucl.ac.uk/staff/J.Shawe-Taylor/">J. Shawe-Taylor</a>.
-		  <b>PAC-Bayes Analysis Beyond the Usual Bounds</b>
+		  <a href="http://www0.cs.ucl.ac.uk/staff/J.Shawe-Taylor/">J. Shawe-Taylor</a>
+		  <br/>
+		  &nbsp;&nbsp;&nbsp;&nbsp;<b>PAC-Bayes Analysis Beyond the Usual Bounds</b>
 		  <br>&nbsp;&nbsp;&nbsp;&nbsp;Conference on Neural Information Processing Systems (<a href="https://neurips.cc/Conferences/2020">NeurIPS</a>) 2020.</br>
 		  &nbsp;&nbsp;&nbsp;
-		  [ <a href="https://proceedings.neurips.cc/paper/2020/hash/c3992e9a68c5ae12bd18488bc579b30d-Abstract.html"><b>PDF</b></a> ]&ensp;
-		  [ <a href="javascript:toggle('pac_bayes_beyond_usual_bounds');"><b>BibTex</b></a> ]&ensp;
-		  <div id="pac_bayes_beyond_usual_bounds" class="bibpanel" onclick="SelectText('pac_bayes_beyond_usual_bounds')" title="Click to select text">
-		    <PRE>
+		  <a href="https://proceedings.neurips.cc/paper/2020/hash/c3992e9a68c5ae12bd18488bc579b30d-Abstract.html">PDF</a>&ensp;
+		  <a href="javascript:toggle('pac_bayes_beyond_usual_bounds_wrap');">Bibtex</a>&ensp;
+		  <div id="pac_bayes_beyond_usual_bounds_wrap" class="bibpanel">
+		    <PRE id="pac_bayes_beyond_usual_bounds">
 @inproceedings{rivasplata2020pac,
 title =	{{PAC}-{B}ayes {A}nalysis {B}eyond the {U}sual {B}ounds},
 author={Rivasplata, O. and Kuzborskij, I. and Szepesv{á}ri, Cs. and Shawe-Taylor, J.}
@@ -269,15 +357,20 @@ booktitle= {Neural Information Processing Systems (NeurIPS)},
 year = {2020}
 }
 		    </PRE>
+		    <button onclick="copyBibliography('pac_bayes_beyond_usual_bounds')">Copy</button>
 		  </div>
 		</p>
 	<p>
-	  I. Kuzborskij, <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>, and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>. <b>Distribution-Dependent Analysis of Gibbs-ERM Principle.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; Conference on Learning Theory (<a href="http://learningtheory.org/colt2019">COLT</a>), Phoenix, AZ, USA. June 2019.<br/>
+	  I. Kuzborskij, <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>, and <a href="https://sites.ualberta.ca/~szepesva/">Cs. Szepesvári</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Distribution-Dependent Analysis of Gibbs-ERM Principle</b>
+	  <br/>&nbsp;&nbsp;&nbsp; Conference on Learning Theory (<a href="http://learningtheory.org/colt2019">COLT</a>), Phoenix, AZ, USA. June 2019.
+	  <br/>
 	  &nbsp;&nbsp;&nbsp;
-	  [ <a href="http://proceedings.mlr.press/v99/kuzborskij19a/kuzborskij19a.pdf"><b>PDF</b></a> ]&ensp;
-	  [ <a href="javascript:toggle('distribution_dependent_gibbs');"><b>BibTex</b></a> ]&ensp;
-	  <div id="distribution_dependent_gibbs" class="bibpanel" onclick="SelectText('distribution_dependent_gibbs')" title="Click to select text">
-<PRE>@InProceedings{pmlr-v99-kuzborskij19a,
+	  <a href="http://proceedings.mlr.press/v99/kuzborskij19a/kuzborskij19a.pdf">PDF</a>&ensp;
+	  <a href="javascript:toggle('distribution_dependent_gibbs_wrap');">Bibtex</a>&ensp;
+	  <div id="distribution_dependent_gibbs_wrap" class="bibpanel">
+<PRE id="distribution_dependent_gibbs">@InProceedings{pmlr-v99-kuzborskij19a,
   title =	 {Distribution-Dependent Analysis of Gibbs-ERM Principle},
   author =	 {Kuzborskij, Ilja and Cesa-Bianchi, Nicol\`{o} and Szepesvári, Csaba},
   booktitle =	 {Proceedings of the Thirty-Second Conference on Learning Theory},
@@ -293,15 +386,18 @@ year = {2020}
   url =		 {http://proceedings.mlr.press/v99/kuzborskij19a.html}
 }
 </PRE>
+<button onclick="copyBibliography('distribution_dependent_gibbs')">Copy</button>
 </div>
 	</p>
 	<p>
-	  I. Kuzborskij, L. Cella, and <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>. <b>Efficient Linear Bandits through Matrix Sketching.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; International Conference on Artificial Intelligence and Statistics (<a href="https://aistats.org/aistats2019/">AISTATS</a>), Naha, Japan. April 2019. <br/>
+	  I. Kuzborskij, L. Cella, and <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Efficient Linear Bandits through Matrix Sketching</b> <br>&nbsp;&nbsp;&nbsp; International Conference on Artificial Intelligence and Statistics (<a href="https://aistats.org/aistats2019/">AISTATS</a>), Naha, Japan. April 2019. <br/>
 	  &nbsp;&nbsp;&nbsp;
-	  [ <a href="https://arxiv.org/pdf/1809.11033"><b>PDF</b> (revised version)</a> ]&ensp;
-	  [ <a href="javascript:toggle('bandit_sketching');"><b>BibTex</b></a> ]&ensp;
-	  <div id="bandit_sketching" class="bibpanel" onclick="SelectText('bandit_sketching')" title="Click to select text">
-	    <PRE>@inproceedings{kuzborskij2019efficient,
+	  <a href="https://arxiv.org/pdf/1809.11033">PDF</a>&ensp;
+	  <a href="javascript:toggle('bandit_sketching_wrap');">Bibtex</a>&ensp;
+	  <div id="bandit_sketching_wrap" class="bibpanel">
+	    <PRE id="bandit_sketching">@inproceedings{kuzborskij2019efficient,
   title =	 {Efficient {L}inear {B}andits through {M}atrix {S}ketching},
   author =	 {Kuzborskij, Ilja and Cella, Leonardo and Cesa-Bianchi, Nicol\`{o}},
   booktitle =	 {Proceedings of Machine Learning Research},
@@ -316,47 +412,56 @@ year = {2020}
   pdf =		 {http://proceedings.mlr.press/v89/kuzborskij19a/kuzborskij19a.pdf},
   url =		 {http://proceedings.mlr.press/v89/kuzborskij19a.html}
   }
-</PRE>
+	    </PRE>
+	    <button onclick="copyBibliography('bandit_sketching')">Copy</button>
 	  </div>
 	</p>
 	<p>
-	  I. Kuzborskij and <a href="http://pub.ist.ac.at/~chl/">C. H. Lampert</a>. <b>Data-Dependent Stability of Stochastic Gradient Descent.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; International Conference on Machine Learning (<a href="https://icml.cc">ICML</a>), Stockholm, Sweden. July 2018.<br/>
+	  I. Kuzborskij and <a href="http://pub.ist.ac.at/~chl/">C. H. Lampert</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Data-Dependent Stability of Stochastic Gradient Descent</b> <br>&nbsp;&nbsp;&nbsp; International Conference on Machine Learning (<a href="https://icml.cc">ICML</a>), Stockholm, Sweden. July 2018.<br/>
 	  &nbsp;&nbsp;&nbsp;
-	  [ <a href="http://proceedings.mlr.press/v80/kuzborskij18a/kuzborskij18a.pdf"><b>PDF</b></a> ]&ensp;
-	  [ <a href="javascript:toggle('data_dependent_sgd_stability');"><b>BibTex</b></a> ]&ensp;
-	  <div id="data_dependent_sgd_stability" class="bibpanel" onclick="SelectText('data_dependent_sgd_stability')" title="Click to select text">
-<PRE>@inproceedings{kuzborskij2017data,
+	  <a href="http://proceedings.mlr.press/v80/kuzborskij18a/kuzborskij18a.pdf">PDF</a>&ensp;
+	  <a href="javascript:toggle('data_dependent_sgd_stability_wrap');">Bibtex</a>&ensp;
+	  <div id="data_dependent_sgd_stability_wrap" class="bibpanel">
+<PRE id="data_dependent_sgd_stability">@inproceedings{kuzborskij2017data,
   title={{D}ata-{D}ependent {S}tability of {S}tochastic {G}radient {D}escent},
   author={I. Kuzborskij and C. H. Lampert},
   booktitle = {International Conference on Machine Learning (ICML)},
   year={2018}
 }
 </PRE>
+<button onclick="copyBibliography('data_dependent_sgd_stability')">Copy</button>
 	  </div>
 	</p>
 	<p>
-	  I. Kuzborskij and <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>. <b>Nonparametric Online Regression while Learning the Metric.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; Advances in Neural Information Processing Systems, Long Beach, CA, USA. December 2017. <br/>
+	  I. Kuzborskij and <a href="http://homes.di.unimi.it/cesa-bianchi/">N. Cesa-Bianchi</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Nonparametric Online Regression while Learning the Metric</b> <br>&nbsp;&nbsp;&nbsp; Advances in Neural Information Processing Systems, Long Beach, CA, USA. December 2017. <br/>
 	  &nbsp;&nbsp;&nbsp;
-	  [ <a href="https://arxiv.org/pdf/1705.07853"><b>PDF</b></a> ]&ensp;
-	  [ <a href="javascript:toggle('nonpara_online_metric_learning');"><b>BibTex</b></a> ]&ensp;
-	  <div id="nonpara_online_metric_learning" class="bibpanel" onclick="SelectText('nonpara_online_metric_learning')" title="Click to select text">
-<PRE>@inproceedings{kuzborskij2017nonparametric,
+	  <a href="https://arxiv.org/pdf/1705.07853">PDF</a>&ensp;
+	  <a href="javascript:toggle('nonpara_online_metric_learning_wrap');">Bibtex</a>&ensp;
+	  <div id="nonpara_online_metric_learning_wrap" class="bibpanel">
+<PRE id="nonpara_online_metric_learning">@inproceedings{kuzborskij2017nonparametric,
   title={{N}onparametric {O}nline {R}egression while {L}earning the {M}etric},
   author={I. Kuzborskij and N. Cesa-Bianchi},
   booktitle= {Neural Information Processing Systems (NIPS)},
   year={2017}
 }
 </PRE>
+<button onclick="copyBibliography('nonpara_online_metric_learning')">Copy</button>
 </div>
 	</p>
 	<p>
-	  I. Kuzborskij and <a href="http://francesco.orabona.com/">F. Orabona</a>. <b>Fast Rates by Transferring from Auxiliary Hypotheses.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; Machine Learning, September 2016.<br/>
+	  I. Kuzborskij and <a href="http://francesco.orabona.com/">F. Orabona</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Fast Rates by Transferring from Auxiliary Hypotheses</b> <br>&nbsp;&nbsp;&nbsp; Machine Learning, September 2016.<br/>
 	  &nbsp;&nbsp;&nbsp;
-	  [ <a href="http://arxiv.org/abs/1412.1619" title="arXiv"><b>PDF</b></a> ]&ensp;
-	  [ <a href="https://link.springer.com/article/10.1007%2Fs10994-016-5594-4" title="Link"><b>Link</b></a> ]&ensp;
-	  [ <a href="javascript:toggle('fast_rates');"><b>BibTex</b></a> ]&ensp;
-	  <div id="fast_rates" class="bibpanel" onclick="SelectText('fast_rates')" title="Click to select text">
-<PRE>@article{kuzborskij2016fast,
+	  <!-- <a href="http://arxiv.org/abs/1412.1619" title="arXiv">PDF</a>&ensp; -->
+	  <a href="https://link.springer.com/article/10.1007%2Fs10994-016-5594-4" title="Link">PDF</a>&ensp;
+	  <a href="javascript:toggle('fast_rates_wrap');">Bibtex</a>&ensp;
+	  <div id="fast_rates_wrap" class="bibpanel">
+<PRE id="fast_rates">@article{kuzborskij2016fast,
   author={I. Kuzborskij and F. Orabona},
   title={Fast {R}ates by {T}ransferring from {A}uxiliary {H}ypotheses},
   journal="Machine Learning",
@@ -365,17 +470,20 @@ year = {2020}
   issn="1573-0565",
   doi="10.1007/s10994-016-5594-4",
   url="http://dx.doi.org/10.1007/s10994-016-5594-4"
-}</PRE>
+  }</PRE>
+<button onclick="copyBibliography('fast_rates')">Copy</button>
 	  </div>
 	</p>
 	<p>
-	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b> Scalable Greedy Algorithms for Transfer Learning. </b> <br>&nbsp;&nbsp;&nbsp;&nbsp; Computer Vision and Image Understanding, 2016.<br/>
+	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;<b> Scalable Greedy Algorithms for Transfer Learning </b> <br>&nbsp;&nbsp;&nbsp; Computer Vision and Image Understanding, 2016.<br/>
 	  &nbsp;&nbsp;&nbsp;
-	  [ <a href="http://arxiv.org/abs/1408.1292" title="arXiv"><b>PDF</b></a> ]&ensp;
-	  [ <a href="http://www.sciencedirect.com/science/article/pii/S1077314216301370" title="Link"><b>Link</b></a> ]&ensp;
-	  [ <a href="javascript:toggle('greedy_tl');"><b>BibTex</b></a> ]&ensp;
-	  <div id="greedy_tl" class="bibpanel" onclick="SelectText('greedy_tl')" title="Click to select text">
-<PRE>@article{kuzborskij2016scalable,
+	  <!-- <a href="http://arxiv.org/abs/1408.1292" title="arXiv">PDF</a>&ensp; -->
+	  <a href="http://www.sciencedirect.com/science/article/pii/S1077314216301370" title="PDF">PDF</a>&ensp;
+	  <a href="javascript:toggle('greedy_tl_wrap');">Bibtex</a>&ensp;
+	  <div id="greedy_tl_wrap" class="bibpanel">
+<PRE id="greedy_tl">@article{kuzborskij2016scalable,
   author    = {I. Kuzborskij and
 	       F. Orabona and
 	       B. Caputo},
@@ -388,38 +496,44 @@ year = {2020}
   issn = "1077-3142",
   doi = "http://dx.doi.org/10.1016/j.cviu.2016.09.003",
   url = "http://www.sciencedirect.com/science/article/pii/S1077314216301370",
-}</PRE>
+  }</PRE>
+<button onclick="copyBibliography('greedy_tl')">Copy</button>
 	  </div>
 	</p>
 	<p>
-	  I. Kuzborskij, <a href="https://fmcarlucci.github.io/">F.M. Carlucci</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b>When Na&iuml;ve Bayes Nearest Neighbors Meet Convolutional Neural Networks.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, USA. June 2016.
+	  I. Kuzborskij, <a href="https://fmcarlucci.github.io/">F.M. Carlucci</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>When Na&iuml;ve Bayes Nearest Neighbors Meet Convolutional Neural Networks</b> <br>&nbsp;&nbsp;&nbsp; Conference on Computer Vision and Pattern Recognition (CVPR), Las Vegas, NV, USA. June 2016.
 	  <br/>
 	  &nbsp;&nbsp;&nbsp;
-	  [ <a href="pub/cvpr16.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
-	  [ <a href="pub/cvpr16_supplement.pdf" title="pdf">Supplementary</a> ]&ensp;
-	  [ <a href="javascript:toggle('cvpr16');"><b>BibTex</b></a> ]&ensp;
-	  [ <a href="code/stoml3.tgz" title="code">Code</a> ]
-	  <div id="cvpr16" class="bibpanel" onclick="SelectText('cvpr16')" title="Click to select text">
-<PRE>@inproceedings{kuzborskij2016when,
+	  <a href="pub/cvpr16.pdf" title="pdf">PDF</a>&ensp;	  
+	  <a href="javascript:toggle('cvpr16_wrap');">Bibtex</a>&ensp;	  
+	  <a href="code/stoml3.tgz" title="code">Code</a>&ensp;	  
+	  <a href="pub/cvpr16_supplement.pdf" title="pdf">Supplementary material</a>
+	  <div id="cvpr16_wrap" class="bibpanel">
+<PRE id="cvpr16">@inproceedings{kuzborskij2016when,
     title={{W}hen {N}aive {B}ayes {N}earest {N}eighbours
 	   {M}eet {C}onvolutional {N}eural {N}etworks},
     author={Kuzborskij, I. and Carlucci, F. M. and Caputo, B.},
     booktitle={Computer Vision and Pattern Recognition (CVPR), 2016 IEEE Conference on},
     year={2016}
-}</PRE>
+  }</PRE>
+<button onclick="copyBibliography('cvpr16')">Copy</button>
 	  </div>
 	</p>
 	<p>
-	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b>Transfer Learning through Greedy Subset Selection. </b> &nbsp; <b><span style="color:black"><a href="http://www.iciap2015.eu/program/awards.html">Best Paper Award</a></span></b>
-<br/>&nbsp;&nbsp;&nbsp;&nbsp;
+	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Transfer Learning through Greedy Subset Selection </b> &nbsp; (<b><span style="color:black"><a href="http://www.iciap2015.eu/program/awards.html">best paper award</a></span></b>)
+<br/>&nbsp;&nbsp;&nbsp;
 	    International Conference on Image Analysis and Processing (ICIAP), Genova, Italy. September 2015.
 	    <br/>
-	    &ensp;&ensp;&ensp;[ <a href="pub/iciap15.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
-	    [ <a id="displayText" href="javascript:toggle('iciap15');"><b>BibTex</b></a> ]&ensp;
-	    [ <a href="code/greedytl.tgz" title="code">Code</a> ]
+	    &ensp;&ensp;<a href="pub/iciap15.pdf" title="pdf">PDF</a>&ensp;
+	    <a id="displayText" href="javascript:toggle('iciap15_wrap');">Bibtex</a>&ensp;
+	    <a href="code/greedytl.tgz" title="code">Code</a>
 
-	  <div id="iciap15" class="bibpanel" onclick="SelectText('iciap15')" title="Click to select text">
-<PRE>@inproceedings{kuzborskij2015transfer,
+	  <div id="iciap15_wrap" class="bibpanel">
+<PRE id="iciap15">@inproceedings{kuzborskij2015transfer,
   author    = {I. Kuzborskij and
 	       F. Orabona and
 	       B. Caputo},
@@ -429,62 +543,70 @@ year = {2020}
 	       {I}},
   pages     = {3--14},
   year      = {2015},
-}</PRE>
+  }</PRE>
+<button onclick="copyBibliography('iciap15')">Copy</button>
 	  </div>
 	</p>
 	<p>
-	  I. Kuzborskij and <a href="http://francesco.orabona.com/">F. Orabona</a>. <b>Stability and Hypothesis Transfer Learning.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; International Conference on Machine Learning (ICML), Atlanta, GA, USA. June 2013.
+	  I. Kuzborskij and <a href="http://francesco.orabona.com/">F. Orabona</a>
 	  <br/>
-	  &nbsp;&nbsp;&nbsp;&nbsp;
-	  [ <a href="pub/icml13.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
-	  [ <a id="displayText" href="javascript:toggle('icml13');"><b>BibTex</b></a> ]&ensp;
-	  [ <a href="pub/icml13_errata.pdf" title="errata"> Errata </a> ]
-<div id="icml13" class="bibpanel" onclick="SelectText('icml13')" title="Click to select text">
-<PRE>@inproceedings{kuzborskij2013stability,
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Stability and Hypothesis Transfer Learning</b> <br>&nbsp;&nbsp;&nbsp; International Conference on Machine Learning (ICML), Atlanta, GA, USA. June 2013.
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;
+	  <a href="pub/icml13.pdf" title="pdf">PDF</a>&ensp;
+	  <a id="displayText" href="javascript:toggle('icml13_wrap');">Bibtex</a>&ensp;
+	  <a href="pub/icml13_errata.pdf" title="errata">Errata</a>
+<div id="icml13_wrap" class="bibpanel">
+<PRE id="icml13">@inproceedings{kuzborskij2013stability,
   author    = {I. Kuzborskij and
 	       F. Orabona},
   title     = {Stability and {H}ypothesis {T}ransfer {L}earning},
   booktitle = {International Conference on Machine Learning (ICML)},
   pages     = {942--950},
   year      = {2013}
-}</PRE>
+  }</PRE>
+<button onclick="copyBibliography('icml13')">Copy</button>
 </div>
 	</p>
 	<p>
-	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>. <b>From N to N+1: Multiclass Transfer Incremental Learning.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; IEEE Conference on Computer Vision and Pattern Recognition (CVPR), Portland, OR, USA. June 2013.
+	  I. Kuzborskij, <a href="http://francesco.orabona.com/">F. Orabona</a>, and <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>
 	  <br/>
-	  &nbsp;&nbsp;&nbsp;&nbsp;
-	[ <a href="pub/cvpr13.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
-	[ <a id="displayText" href="javascript:toggle('cvpr13');"><b>BibTex</b></a> ]&ensp;
-	[ <a title="C++/mex implementation, standalone" href="code/multiple.tgz" title="code">Code</a> ]&ensp;
-	<!-- <a href="code/cvpr13_code.zip" title="code">[Code (old version)]</a>&ensp; -->
-	[ <a href="pub/cvpr13_supplement.pdf" title="pdf">Supplement</a> ]
-<div id="cvpr13" class="bibpanel" onclick="SelectText('cvpr13')" title="Click to select text">
-<PRE>@inproceedings{kuzborskij2013from,
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>From N to N+1: Multiclass Transfer Incremental Learning</b> <br>&nbsp;&nbsp;&nbsp; Conference on Computer Vision and Pattern Recognition (CVPR), Portland, OR, USA. June 2013.
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;
+	<a href="pub/cvpr13.pdf" title="pdf">PDF</a>&ensp;
+	<a id="displayText" href="javascript:toggle('cvpr13_wrap');">Bibtex</a>&ensp;
+	<a title="C++/mex implementation, standalone" href="code/multiple.tgz" title="code">Code</a>&ensp;
+	<a href="pub/cvpr13_supplement.pdf" title="pdf">Supplementary material</a>
+<div id="cvpr13_wrap" class="bibpanel">
+<PRE id="cvpr13">@inproceedings{kuzborskij2013from,
   title =        {From {N} to {N}+1: {M}ulticlass {T}ransfer {I}ncremental {L}earning},
   author =       {Kuzborskij, I. and Orabona, F. and Caputo, B.},
   booktitle={Computer Vision and Pattern Recognition (CVPR), 2013 IEEE Conference on},
   pages={3358--3365},
   year={2013},
   organization={IEEE}
-}</PRE>
+  }</PRE>
+<button onclick="copyBibliography('cvpr13')">Copy</button>
 </div>
 	</p>
 
 	<h3>Other topics</h3>
 	<p>
 	  M. Atzori, A. Gijsberts, I. Kuzborskij, S. Elsig, A.-G. Mittaz Hager, O. Deriaz,
+	  <br/>
 	  <a href="http://rmc.dlr.de/rm/en/staff/claudio.castellini/">C. Castellini</a>,
 	  <a href="http://medgift.hevs.ch/silverstripe/index.php/team/henning-mueller/">H. Muller</a>,
-	  <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>.
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Characterization of a Benchmark Database for Myoelectric Movement Classification.</b> <br>&nbsp;&nbsp;&nbsp;&nbsp; IEEE Transactions on Neural Systems and Rehabilitation Engineering, 2015.
+	  <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>
+	  <br/>
+	  &nbsp;&nbsp;&nbsp;&nbsp;<b>Characterization of a Benchmark Database for Myoelectric Movement Classification.</b> <br>&nbsp;&nbsp;&nbsp; Transactions on Neural Systems and Rehabilitation Engineering, 2015.
 	  <br/>
 
-	  &nbsp;&nbsp;&nbsp;&nbsp;
-	  [ <a href="pub/tnsre15.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
-	  [ <a id="displayText" href="javascript:toggle('tnsre14');"><b>BibTex</b></a> ]&ensp;
-	  <div id="tnsre14" class="bibpanel" onclick="SelectText('tnsre14')" title="Click to select text">
-<PRE>@article{atzori2015characterization,
+	  &nbsp;&nbsp;&nbsp;
+	  <a href="pub/tnsre15.pdf" title="pdf">PDF</a>&ensp;
+	  <a id="displayText" href="javascript:toggle('tnsre14_wrap');">Bibtex</a>&ensp;
+	  <div id="tnsre14_wrap" class="bibpanel">
+<PRE id="tnsre14">@article{atzori2015characterization,
   title={Characterization of a {B}enchmark {D}atabase for
 	 {M}yoelectric {M}ovement {C}lassification},
   author={Atzori, M. and Gijsberts, A. and Kuzborskij, I. and
@@ -496,19 +618,20 @@ year = {2020}
   pages={73--83},
   year={2015},
   publisher={IEEE}
-}</PRE>
+  }</PRE>
+<button onclick="copyBibliography('tnsre14')">Copy</button>
 	  </div>
 	</p>
 	<p>
-	  I. Kuzborskij, A. Gijsberts, <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>.
-	  <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>On the Challenge of Classifying 52 Hand Movements from Surface Electromyography.</b>
+	  I. Kuzborskij, A. Gijsberts, <a href="http://www.dis.uniroma1.it/~barbaracaputo/">B. Caputo</a>
+	  <br/>&nbsp;&nbsp;&nbsp;&nbsp;<b>On the Challenge of Classifying 52 Hand Movements from Surface Electromyography.</b>
 	  <br/>
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;International Conference of the IEEE Engineering in Medicine and Biology Society, San Diego, CA, USA. August 2012.
+	  &nbsp;&nbsp;&nbsp;&nbsp;International Conference of the IEEE Engineering in Medicine and Biology Society, San Diego, CA, USA. August 2012.
 	  <br/>
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ <a href="pub/embc12.pdf" title="pdf"><b>PDF</b></a> ]&ensp;
-	  [ <a id="displayText" href="javascript:toggle('embc12');"><b>BibTex</b></a> ]&ensp;
-	  <div id="embc12" class="bibpanel" onclick="SelectText('embc12')" title="Click to select text">
-<PRE>@inproceedings{kuzborskij2012challenge,
+	  &nbsp;&nbsp;&nbsp;&nbsp;<a href="pub/embc12.pdf" title="pdf">PDF</a>&ensp;
+	  <a id="displayText" href="javascript:toggle('embc12_wrap');">Bibtex</a>&ensp;
+	  <div id="embc12_wrap" class="bibpanel">
+<PRE id="embc12">@inproceedings{kuzborskij2012challenge,
   title={On the {C}hallenge of {C}lassifying 52 {H}and {M}ovements from
 	 {S}urface {E}lectromyography},
   author={Kuzborskij, I. and Gijsberts, A. and Caputo, B.},
@@ -519,6 +642,7 @@ year = {2020}
   organization={IEEE}
 }
 </PRE>
+<button onclick="copyBibliography('embc12')">Copy</button>
 	  </div>
 	</p>
     </div>

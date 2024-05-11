@@ -1,185 +1,137 @@
-/* find below the "div" structure
-mainbcontainer
-	headercontainer
-		logocontainer
-		bannercontainer
-	headercontainer
-	
-	middlecontainer
-		addresscontainer
-		contentcontainer
-			roundbox
-	middlecontainer
-	
-	footercontainer
-mainbcontainer
-*/
-
-a:link {color:#000000;}      /* unvisited link */
-a:visited {color:#000000;}  /* visited link */
-a:hover {color:#636363;}  /* mouse over link */
-a:active {color:#636363;}  /* selected link */ 
-
-body{
-background-color:#ffffff;
-margin:0em 0em 0em 0em;
-/* color: #636363; */
-/* color: #000000; */
-font-family: Arial,Helvetica,Verdana,"Lucida Grande",Lucida sans-serif;
-font-size:0.8em;
-text-align: justify;
-line-height: 1.5;
-}
-img{
-border:0;
-}
-/*this is the style for the main container with a fixed size*/
-#maincontainer{
-width:1280;
-margin:0em auto;
-float:center;
-background-color:#ffffff;
-}
-/*this is the style for the container header*/
-#headercontainer{
-width:1280;
-background-color:#ffffff;
-margin:0em;
-padding:0em 0em 0em 0em;
-clear:both;
-}
-/*this is the style for the container logo*/
-#logocontainer{
-width:200 !important;
-width:265;
-padding:0.8em 0em 0em 5em;
-float:left;
-background-color: #ffffff;
-}
-/*this is the style for the container banner*/
-#bannercontainer{
-/* background-image:url(banner.png); */
-background-repeat:no-repeat;
-width:940px;
-height:108px;
-padding:0em 0em 0em 0em;
-float:left;
-background-color:#ffffff;
-}
-/*this is the style for the text 'user name' located in the banner*/
-#yourname{
-color:#000000;
-font-size:20px;
-padding:1em 0em 1em 0.9em;
-font-family: Geneva,Verdana,Helvetica,"Lucida Grande",Lucida sans-serif;
-font-style:normal;
-font-weight:bold;
-
-
-background: none repeat scroll 0% 0% rgb(234, 236, 234);
-border-radius: 5px 5px 5px 5px;
-
-/* text-shadow: #000000 1px 1px 0.5px; */
-}
-/*this is the style for the midlle container*/
-#middlecontainer{
-width:1280;
-clear:both;
-background-color:#ffffff;
-margin:0em;
-padding:0em;
-}
-/*this is the style for the container address*/
-#addresscontainer{
-width:auto!important;
-padding:0.5em 2em 0.5em 2em;
-margin:2em 0em 0em 0em;
-background-color:#ffffff;
-float:left;
-margin-left: 2em;
-
-background: none repeat scroll 0% 0% rgb(234, 236, 234);
-border-radius: 5px 5px 5px 5px;
+/* General Reset and Body Styling */
+body {
+    background-color: #ffffff;
+    margin: 0;
+    font-family: Lato, Geneva, Helvetica, Verdana, "Lucida Grande", Lucida sans-serif;
+    font-size: 0.8em;
+    text-align: justify;
+    line-height: 1.5;
 }
 
-.bibpanel{
-    display: none;
-    padding:1em 0em 1em 2em;
-    background-color: rgb(234, 236, 234);
-    border-radius: 5px 5px 5px 5px;    
+/* Universal Background Color for Containers */
+#maincontainer, #headercontainer, #middlecontainer, #footercontainer, #contentcontainer {
+    background-color: #ffffff;
 }
 
-#leftcont{
-width:300;
-margin:2em 0em 0em 0em;
-background-color:#ffffff;
-float:left;
-margin-left: 2em;
-
-background: none repeat scroll 0% 0%;
-border-radius: 5px 5px 5px 5px;
+/* Main Container */
+#maincontainer {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#photo{
-width:160;
-display: block;
-margin:3em 0em 0em 0em;
-background-color:#ffffff;
-margin-left: auto;
-margin-right: auto;
-
-/* background: none repeat scroll 0% 0% #00000000; */
-border-radius: 5px 5px 5px 5px;
+/* Header Container */
+#headercontainer {
+    width: 1280px;
+    margin: 0;
+    padding: 0;
+    clear: both;
 }
 
-/*this is the style for the container content*/
-#contentcontainer{
-width:830;
-padding:0em 0em 0em 0em;
-/* margin:2em 2em 2em 2em; */
-margin:2em 0em 0em 0em;
-float:center;
-background-color:#ffffff;
-font-size:15;
-}
-/*this is the style for the container footer*/
-#footercontainer{
-clear:both;
-width:1100;
-height:2em;
-margin:9em 0em 0em 2em !important;
-margin:2em 0em 0em 2em;
-padding:0.5em 0em 0.8em 0em;
-background-color: #cccccc;
-}
-#footertxt
-{
-width:500;
-text-align:left;
-margin:0em 0em 0em 3em;
+/* Logo Container */
+#logocontainer {
+    width: 265px;
+    padding: 0.8em 0em 0em 5em;
+    float: left;
 }
 
-#blacklink
-{
-    color:#000000;
+/* Banner Container */
+#bannercontainer {
+    width: 940px;
+    height: 108px;
+    float: left;
 }
 
-#pane{
-    display: block;
-    padding: 7px 15px 0px;
-    height: 28px;
-    font-size: 16px;
-    background: none repeat scroll 0% 0% rgb(234, 236, 234);
-    color: rgb(102, 102, 102);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+/* Middle Container */
+#middlecontainer {
+    width: 1280px;
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+/* Content Container */
+#contentcontainer {
+    width: 850px;
+    padding: 0;
+    margin: 2em 0em 0em 0em;
+    float: left;
+    font-size: 15px;
+}
+
+/* Footer Container */
+#footercontainer {
+    width: 1100px;
+    height: 2em;
+    margin: 2em 0em 0em 2em;
+    padding: 0.5em 0em 0.8em 0em;
+    background-color: #cccccc;
+    clear: both;
+}
+
+/* Anchor Tag Styles */
+a:link, a:visited {
+    color: #000000;
+}
+
+a:hover, a:active {
+    color: #636363;
+}
+
+a {
     text-decoration: none;
 }
 
+/* Image Styling */
+img {
+    border: 0;
+}
+
+/* Additional Styles for Specific Elements */
+#yourname {
+    color: #000000;
+    font-size: 22px;
+    padding: 1em 0em 1em 0.9em;
+    font-family: Lato, Geneva, Verdana, Helvetica, "Lucida Grande", Lucida sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    background: none repeat scroll 0% 0% rgb(234, 236, 234);
+    border-radius: 10px;
+}
+
+/* Responsive Design Adjustments */
+@media only screen and (max-width: 768px) {
+    #maincontainer, #headercontainer, #middlecontainer, #footercontainer {
+        width: 100%;
+    }
+
+    #logocontainer, #bannercontainer {
+        float: none;
+        width: auto;
+        padding: 0.8em;
+    }
+
+    #footercontainer {
+        padding: 0.5em;
+    }
+}
+
+/* Centering Screen for Flexbox */
 .center-screen {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.bibpanel{
+    display: none;
+    font-size: 10px;
+    padding:1em 0em 1em 2em;
+    background-color: rgb(234, 236, 234);
+    border-radius: 10px 10px 10px 10px;    
 }
