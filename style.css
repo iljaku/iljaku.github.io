@@ -54,11 +54,12 @@ body {
 
 /* Content Container */
 #contentcontainer {
-    width: 45%;
+    width: 39%;
     padding: 0;
     margin: 2em 0em 0em 0em;
     float: left;
     font-size: 15px;
+    margin-left: 5%;
 }
 
 /* Footer Container */
@@ -93,11 +94,12 @@ img {
 #yourname {
     color: #000000;
     font-size: 22px;
-    padding: 1em 0em 1em 0.9em;
+    /* padding: 1em 0em 1em 0.9em; */
+    padding: 1em 0em 1em 0em;
     font-family: Lato, Geneva, Verdana, Helvetica, "Lucida Grande", Lucida sans-serif;
     font-style: normal;
     font-weight: bold;
-    background: none repeat scroll 0% 0% rgb(234, 236, 234);
+    /* background: none repeat scroll 0% 0% rgb(234, 236, 234); */
     border-radius: 10px;
 }
 
@@ -110,6 +112,7 @@ img {
     #contentcontainer {
 	width: 80%;
 	font-size: 80%;
+	margin-left: 0%;
     }
 
     #logocontainer, #bannercontainer {
