@@ -15,7 +15,7 @@ body {
 
 /* Main Container */
 #maincontainer {
-    width: 1280px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
 
 /* Header Container */
 #headercontainer {
-    width: 1280px;
+    width: 100%;
     margin: 0;
     padding: 0;
     clear: both;
@@ -39,14 +39,14 @@ body {
 
 /* Banner Container */
 #bannercontainer {
-    width: 940px;
+    width: 100%;
     height: 108px;
     float: left;
 }
 
 /* Middle Container */
 #middlecontainer {
-    width: 1280px;
+    width: 100%;
     clear: both;
     margin: 0;
     padding: 0;
@@ -54,7 +54,7 @@ body {
 
 /* Content Container */
 #contentcontainer {
-    width: 850px;
+    width: 45%;
     padding: 0;
     margin: 2em 0em 0em 0em;
     float: left;
@@ -63,7 +63,7 @@ body {
 
 /* Footer Container */
 #footercontainer {
-    width: 1100px;
+    width: 100%;
     height: 2em;
     margin: 2em 0em 0em 2em;
     padding: 0.5em 0em 0.8em 0em;
@@ -103,8 +103,13 @@ img {
 
 /* Responsive Design Adjustments */
 @media only screen and (max-width: 768px) {
-    #maincontainer, #headercontainer, #middlecontainer, #footercontainer {
+    #maincontainer, #headercontainer, #middlecontainer, #footercontainer, #bannercontainer {
         width: 100%;
+    }
+
+    #contentcontainer {
+	width: 80%;
+	font-size: 80%;
     }
 
     #logocontainer, #bannercontainer {
@@ -134,4 +139,17 @@ img {
     padding:1em 0em 1em 2em;
     background-color: rgb(234, 236, 234);
     border-radius: 10px 10px 10px 10px;    
+}
+
+.container {
+    position: relative; /* Establishes a positioning context for absolute positioning */
+}
+
+.tag {
+    position: absolute; /* Positions the tag absolutely within the container */
+    left: 0; /* Aligns the tag to the far left of the container */
+    transform: translateX(-100%); /* Moves the tag completely to the left of its start position */
+    margin-left: -40px; /* Adds some space between the tag and the content area */
+    padding: 5px 10px; /* Optional: adds padding inside the tag */
+    border-radius: 5px; /* Optional: rounds the corners of the tag */
 }
